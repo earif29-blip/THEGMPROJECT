@@ -24,7 +24,7 @@
     .sidebar:hover .sidebar-text {
         left: 0 ;
     }
-.sidebar:hover .sidebar-about {
+.sidebar:hover #sidebar-about {
         left: 0 ;
     }
 
@@ -36,7 +36,7 @@
     border-right: 4px solid white;
     transition: background-color 0.3s ease, left 0.3s ease;
 }
-.sidebar-about{
+#sidebar-about{
     position: fixed;
     background-color: #171717;
     left: -150;
@@ -47,7 +47,7 @@
 .sidebar-text p {
     padding-left: 20px;
 }
-.sidebar-about p{
+#sidebar-about .sidebar-about p{
     padding-left: 20px;
 }
 
@@ -70,7 +70,7 @@
 .sidebar-text:hover {
     background-color: #585858;
 }
-.sidebar-about:hover {
+#sidebar-about:hover {
     background-color: #585858;
 }
 
@@ -81,9 +81,15 @@
         height: 90vh;
         transition: margin-left 0.3s ease;
     }
-    .sidebar-text + .sidebar-about{
+    .sidebar-text {
         position:fixed;
-        top: 69;
+        top: 20;
+        z-index: 6;
+        transition: background-color 0.3s ease, left 0.3s ease;
+    }
+    #sidebar-about{
+        position:fixed;
+        top: 68;
         z-index: 5;
         transition: background-color 0.3s ease, left 0.3s ease;
     }
@@ -96,9 +102,11 @@
     <div class = sidebar-text>
     <p> home </p>
     </div>
+    <a href="about.html" style="color: white; display: inline-block" id = "sidebar-about">
     <div class = sidebar-about>
-        <p> about me</p>
+        <p> about me</p> 
     </div>
+    </a>
 </div>
 <div class = mainstuff>
 <h1 style="color: white; text-align: center; font-family: 'Press Start 2P'; font-weight: 400; font-style: normal; font-size: 80px ; position: relative; top: 48px; overflow-x: hidden;" >THEGMPROJECT</h1>
