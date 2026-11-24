@@ -1,6 +1,6 @@
 <html>
 <head
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
@@ -101,6 +101,7 @@
         left: 0px;
         bottom: -150vh;
         z-index: 10;
+        transition: bottom 1s cubic-bezier(0.2, 0, 0.1, 1);
     }
     .triangle {
         background-color: orangered;
@@ -109,12 +110,21 @@
           clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
           z-index: 11;
           position: fixed;
-          
+          bottom: -50vh;
+          transition: bottom 1s cubic-bezier(0.2, 0, 0.1, 1);
+    }
+    .triangle2 {
+        background-color: orange;
+        width: 100vw;
+        height: 25vw;
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          z-index: 11;
+          position: fixed;
+          bottom: -150vh;
+          transition: bottom 1s cubic-bezier(0.2, 0, 0.1, 1);
+
     }
   </style>
-  <script>
-    const aboutme = document.getElementById('sidebar-about');
-  </script>
     <title>THEGMPROJECT</title>
 </head>
 <body>
@@ -131,9 +141,25 @@
 </div>
 <div class = slide></div>
 <div class = triangle></div>
+<div class = triangle2></div>
 <div class = mainstuff>
 <h1 style="color: white; text-align: center; font-family: 'Press Start 2P'; font-weight: 400; font-style: normal; font-size: 80px ; position: relative; top: 48px; overflow-x: hidden;" >THEGMPROJECT</h1>
 <p style="color: white; text-align: left; font-family: 'monospace'; font-style: normal; font-size: 36px; position: relative; top: 20px; left: 72px; overflow-x: hidden;"> Ehaan Arif's passion project.</p>
 </div>
+<script>
+    const aboutme = document.getElementById('sidebar-about');
+        aboutme.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            const slide = document.querySelector('.slide');
+            const triangle = document.querySelector('.triangle');
+            const triangle2 = document.querySelector('.triangle2');
+            slide.style.bottom = '150vh';
+            triangle.style.bottom = '250vh';
+            triangle2.style.bottom = '150vh';
+
+        })
+    
+  </script>
 </body>
 </html>
