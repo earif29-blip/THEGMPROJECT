@@ -33,7 +33,6 @@
     background-color: #171717;
     left: -150;
     width: 196px;
-    border-right: 4px solid white;
     transition: background-color 0.3s ease, left 0.3s ease;
 }
 #sidebar-about{
@@ -41,7 +40,6 @@
     background-color: #171717;
     left: -150;
     width: 196px;
-    border-right: 4px solid white;
     transition: background-color 0.3s ease, left 0.3s ease;
 }
 .sidebar-text p {
@@ -96,10 +94,10 @@
     .slide {
         background-color: orangered;
         position: fixed;
-        height: 100vh;
+        height: 150vh;
         width: 100vw;
         left: 0px;
-        bottom: -150vh;
+        bottom: -200vh;
         z-index: 10;
         transition: bottom 1s cubic-bezier(0.2, 0, 0.1, 1);
     }
@@ -110,17 +108,18 @@
           clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
           z-index: 11;
           position: fixed;
-          bottom: -50vh;
+          bottom: -25vh;
           transition: bottom 1s cubic-bezier(0.2, 0, 0.1, 1);
     }
     .triangle2 {
         background-color: orange;
-        width: 100vw;
-        height: 25vw;
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        width: 36vw;
+        height: 150vh;
+         clip-path: polygon(50% 0%, 0% 50%, 0% 100%, 100% 100%, 100% 50%);
           z-index: 11;
           position: fixed;
-          bottom: -150vh;
+          bottom: -200vh;
+          left: 32vw;
           transition: bottom 1s cubic-bezier(0.2, 0, 0.1, 1);
 
     }
